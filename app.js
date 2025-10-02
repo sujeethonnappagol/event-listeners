@@ -77,11 +77,29 @@
 
 // load event : it will work when the page is loaded
 // scroll event : it will work when we scroll the page
-let loader = document.querySelector('#loader');
-loader.classList.remove('hidden');
-loader.classList.add('page-loader');
-window.addEventListener('load', ()=>{
-    loader.classList.add('hidden');
-    loader.classList.remove('page-loader');
+// let loader = document.querySelector('#loader');
+// loader.classList.remove('hidden');
+// loader.classList.add('page-loader');
+// window.addEventListener('load', ()=>{
+//     loader.classList.add('hidden');
+//     loader.classList.remove('page-loader');
    
+// })
+
+
+// scroll event: it will work when we scroll the page
+
+// window.addEventListener('scroll', ()=>{
+//     console.log('scrolled');
+// })
+
+
+let btn = document.querySelector('.help');
+window.addEventListener('scroll', ()=>{
+    if(window.scrollY > 300){
+        btn.classList.add('show');
+    }else{
+        btn.classList.remove('show');
+    }
+    
 })
